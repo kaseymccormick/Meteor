@@ -1,2 +1,0 @@
-##Leaderboard
-Meteor based application created following the "Your First Meteor Application" obtained via http://meteortips.com/first-meteor-tutorial/. After which I'll go on to "Your Second Meteor Application" via http://meteortips.com/second-meteor-tutorial/.
