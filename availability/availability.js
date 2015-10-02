@@ -1,19 +1,18 @@
+PlayersList = new Mongo.Collection('players');
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+  
+  Template.addPlayerForm(event){
+    'submit form': function(event){
+    event.preventDefault();
+    var playerNameVar = event.target.playerName.value;
+    
+    PlayersList.insert({
+      name:playerNameVar,
+      score:0
+    });
     }
   });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
 }
 
 if (Meteor.isServer) {
@@ -21,3 +20,4 @@ if (Meteor.isServer) {
     // code to run on server at startup
   });
 }
+
