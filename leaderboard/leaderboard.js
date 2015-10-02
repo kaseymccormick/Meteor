@@ -2,8 +2,8 @@ PlayersList = new Mongo.Collection('players');
 if(Meteor.isClient){
   Template.leaderboard.helpers({
     'player': function(){
-    var currentUserId = Meteor.userId();
-    return PlayersList.find({}, {sort: {score: -1, name: 1}});
+      var currentUserId = Meteor.userId();
+      return PlayersList.find({}, {sort: {score: -1, name: 1}});
     },
     'selectedClass': function(){
       // return "selected"
@@ -27,11 +27,11 @@ if(Meteor.isClient){
     }, //comma seperates the events and is needed
     'click .increment': function(){
       var selectedPlayer = Session.get('selectedPlayer');
-      PlayersList.update(selectedPlayer, {$inc: {score:5} });
+      Meteor.call('modifyPlayerScore', selectedPlayer, 5);
     },
     'click .decrement': function(){
       var selectedPlayer = Session.get('selectedPlayer');
-      PlayersList.update(selectedPlayer, {$inc: {score: -5} });
+      Meteor.call('modifyPlayerScore', selectedPlayer, -5);
     },
     'click .remove': function(){
       var selectedPlayer = Session.get('selectedPlayer');
@@ -43,9 +43,9 @@ if(Meteor.isClient){
   Template.addPlayerForm.events({
     
     'submit form': function(event){
-    event.preventDefault();
-    var playerNameVar = event.target.playerName.value;
-    Meteor.call('insertPlayerData', playerNameVar);
+      event.preventDefault();
+      var playerNameVar = event.target.playerName.value;
+      Meteor.call('insertPlayerData', playerNameVar);
     }
   });
   
@@ -69,8 +69,13 @@ if(Meteor.isServer){
       });
     },
     'removePlayerData': function(selectedPlayer){
+      var currentUserId = Meteor.userId();
+      PlayersList.remove({_id: selectedPlayer, createdBy: currentUserId});
+    },
+    'modifyPlayerScore': function(selectedPlayer, scoreValue){
     var currentUserId = Meteor.userId();
-    PlayersList.remove({_id: selectedPlayer, createdBy: currentUserId});
+    PlayersList.update( {_id: selectedPlayer, createdBy: currentUserId},
+    {$inc: {score: scoreValue} });
     }
   });
   
