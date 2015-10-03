@@ -1,23 +1,39 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+Todos = new Meteor.Collection('todos');
+if(Meteor.isClient){
+  
+  Template.todos.helpers({
+    'todo' : function(){
+      return Todos.find({},{sort:{createdAt:-1}});
     }
   });
-
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
+  
+  Template.addTodo.events({
+    
+    'submit form': function(event){
+      event.preventDefault();
+      var todoName = event.target.todoName.value;
+      Todos.insert({
+        name: todoNmae,
+        completed: false,
+        createdAt: new Date()
+      });
     }
   });
+  
+  Template.todoItem.events({
+    'click .delete-todo' : function(event){
+      event.preventDefault();
+      var documentId = this._id;
+      var confirm = window.confirm("delete this task");
+      if(confirm){
+        Todos.remove({_id: documentId});
+      }
+    }
+  });
+  
 }
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
+if(Meteor.isServer){
+  // server code goes here
 }
+
