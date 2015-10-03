@@ -1,29 +1,21 @@
 <head>
-    <title>Todos</title>
+  <title>Todo List</title>
 </head>
+ 
 <body>
-{{> todos}}
-</body>
-
-  <template name="todos">
-      {{> addTodo}}
+  <div class="container">
+    <header>
+      <h1>Todo List</h1>
+    </header>
+ 
     <ul>
-      {{#each todo}}
-          {{> todoItem}}
+      {{#each tasks}}
+        {{> task}}
       {{/each}}
     </ul>
-  </template>
-  
-  <template name="todoItem">
-       <li>
-         {{name}}
-         [<a href="#" class="delete-todo">Delete</a>]
-       </li>
-  </template>
-  
-  <template name="addTodo">
-    <form>
-      Create a task:
-      <input type="text" placeholder="type a task here">
-    </form>
-  </template>
+  </div>
+</body>
+ 
+<template name="task">
+  <li>{{text}}</li>
+</template>
