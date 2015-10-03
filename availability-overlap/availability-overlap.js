@@ -6,7 +6,7 @@ if (Meteor.isClient) {
   //template keyword searches through templates in meteor project
   //leaderboard keyword is a reference to the name of the template created
   //player keyword is the name we're giving to this function
-  Template.current_time.helpers({
+  Template.current_dates.helpers({
     'now': function(){
       return moment().format('MMM Do YYYY [at] HH:mm:ss');
     },

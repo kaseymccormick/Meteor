@@ -3,73 +3,161 @@
 </head>
 
 <body>
-  <h1>Availability Overlap 
-  <em> for one year</em></h1>
-
-  {{ >current_time}}
-  {{ >span_time}}
-
-<p>how far do you want to collect? <em>reccomended 6 months max</em> </p>
-<ul>
-  <li>now</li>
-  <li>set date
-    <ul>
-    <li>month</li>
-    <li>day</li>
-    <li>year</li>
-  </ul>
-  </li>
-</ul>
-<p>until</p>
-<ul>
-  <li>6months</li>
-  <li>set date
-    <ul>
-    <li>month</li>
-    <li>day</li>
-    <li>year</li>
-  </ul>
-  </li>
-</ul>
-<p>are there day's you know you don't want to get availability for? example:holidays</p>
-<button>yes</button>
-<button>no</button>
-<ul>
-  <li>All Sundays</li>
-  <li>All Mondays</li>
-  <li>All Tuesdays</li>
-  <li>All Wendesdays</li>
-  <li>All Thursdays</li>
-  <li>All Fridays</li>
-  <li>All Saturdays</li>
-  <li>All Sundays</li>  
-  <li>All US holidays<a href=""> list here</a></li>
-</ul>  
-<h4>specific date</h4>
-<ul>
-  <li>month</li>
-  <li>day</li>
-  <li>year</li>
-</ul>
-<button>add another</button>
   <div class="container">
-  {{> hello}}
-</div>
+    <h1>Availability Overlap<small> for short time</small></h1>
+
+
+    {{ >current_dates}}
+
+    
+    
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="panel-title__step">1)</span> Select dates</h3>
+      </div>
+      <div class="panel-body">
+        {{ >span_dates}}
+        {{ >exception_dates}}
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="panel-title__step">2)</span> Select times</h3>
+      </div>
+      <div class="panel-body">
+        {{ >span_times}}
+        {{ >exception_times}}
+      </div>
+    </div>
+    
+
+    
+    {{> hello}}
+
+  </div>
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>
-<template name="current_time">
-<p>Today is {{now}}</p>
-<p>Tomorrow will be {{tomorrow}}</p>
+
+
+<template name="current_dates">
+  <h3>Today is <em>{{now}}</em> and tomorrow will be <em>{{tomorrow}}</em></h3>
 </template>
-<template name="span_time">
+
+
+<template name="span_dates">
   <!-- {{#if currentUser}} -->
+  <h4>how far do you want to collect? <em>reccomended 6 months max</em> </h4>
+  
   <form>
-    <input type="text" name="playerName">
-    <input type="submit" value="Add Player">
+    <input type="radio" name="default" value="sixmonts">Six months<br>
+    <input type="radio" name="setdate" value="setdate">Set date
+    <div class="well">
+      <label>Day of the week</label>
+      <select>
+        <option value="volvo">Monday</option>
+        <option value="saab">Tuesday</option>
+        <option value="opel">Wednesday</option>
+        <option value="audi">Thursday</option>
+        <option value="volvo">Friday</option>
+        <option value="saab">Saturday</option>
+        <option value="opel">Sunday</option>
+      </select>
+      <label>Month</label>
+      <select>
+        <option value="volvo">January</option>
+        <option value="saab">Feburary</option>
+        <option value="opel">March</option>
+        <option value="audi">April</option>
+        <option value="volvo">May</option>
+        <option value="saab">June</option>
+        <option value="opel">July</option>
+        <option value="volvo">August</option>
+        <option value="saab">September</option>
+        <option value="opel">October</option>
+        <option value="audi">November</option>
+        <option value="volvo">December</option>
+      </select>
+      <label>Date</label>
+      <!--auto fill dates given month selected -->
+      <select>
+        <option value="1">1</option>
+      </select>
+      <label>Year</label>
+      <!--auto fill year given 2 years max from today -->
+      <select>
+        <option value="1998">1998</option>
+      </select>
+    </div>
   </form>
   <!-- {{/if}} -->
+</template>
+<template name="exception_dates">
+  <h4>Are there day's you know you don't want to get availability for? <em>For example example holidays or specific days of the week.</em></h4>
+  <input type="radio" name="default" value="sixmonts">no<br>
+  <input type="radio" name="setdate" value="setdate">yes  
+  <div class="well">
+    <ul>
+      <li>All Sundays</li>
+      <li>All Mondays</li>
+      <li>All Tuesdays</li>
+      <li>All Wendesdays</li>
+      <li>All Thursdays</li>
+      <li>All Fridays</li>
+      <li>All Saturdays</li>
+      <li>All Sundays</li>  
+      <li>All US holidays<a href=""> list here</a></li>
+      <li>specific date</li>
+    </ul>  
+    <div class="well specific date">
+      <label>Day of the week</label>
+      <select>
+        <option value="volvo">Monday</option>
+        <option value="saab">Tuesday</option>
+        <option value="opel">Wednesday</option>
+        <option value="audi">Thursday</option>
+        <option value="volvo">Friday</option>
+        <option value="saab">Saturday</option>
+        <option value="opel">Sunday</option>
+      </select>
+      <label>Month</label>
+      <select>
+        <option value="volvo">January</option>
+        <option value="saab">Feburary</option>
+        <option value="opel">March</option>
+        <option value="audi">April</option>
+        <option value="volvo">May</option>
+        <option value="saab">June</option>
+        <option value="opel">July</option>
+        <option value="volvo">August</option>
+        <option value="saab">September</option>
+        <option value="opel">October</option>
+        <option value="audi">November</option>
+        <option value="volvo">December</option>
+      </select>
+      <label>Date</label>
+      <!--auto fill dates given month selected -->
+      <select>
+        <option value="1">1</option>
+      </select>
+      <label>Year</label>
+      <!--auto fill year given 2 years max from today -->
+      <select>
+        <option value="1998">1998</option>
+      </select>
+       <br>
+       <button class="btn-primary">
+         <i class="fa fa-plus"></i> another</button>
+    </div>
+   
+  </div>
+</template>
+<template name="time_blocks">
+<ul>
+  <li>get full days of availability no time blocks</li>
+  <li></li>
+</ul>
 </template>
