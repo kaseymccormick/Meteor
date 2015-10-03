@@ -6,8 +6,8 @@
   <h1>Availability Overlap 
   <em> for one year</em></h1>
 
-<p>Today's date:? {{ >leaderboard}}</p>
-<p>The time is:?</p>
+  {{ >current_time}}
+  {{ >span_time}}
 
 <p>how far do you want to collect? <em>reccomended 6 months max</em> </p>
 <ul>
@@ -61,6 +61,15 @@
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>
-<template name="leaderboard">
-{{player}}
+<template name="current_time">
+<p>Today is {{now}}</p>
+<p>Tomorrow will be {{tomorrow}}</p>
+</template>
+<template name="span_time">
+  <!-- {{#if currentUser}} -->
+  <form>
+    <input type="text" name="playerName">
+    <input type="submit" value="Add Player">
+  </form>
+  <!-- {{/if}} -->
 </template>
