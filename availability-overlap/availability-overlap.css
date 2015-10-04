@@ -5,3 +5,6 @@ h3 em{
 .panel-title__step{
 
 }
+.panel-title__step__complete {
+    float: right;
+}

@@ -13,6 +13,7 @@ if (Meteor.isClient) {
     'tomorrow': function(){
       return moment().add(1,'days').format('MMM Do YYYY');
     }
+
   });
   
 

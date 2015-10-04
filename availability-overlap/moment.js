@@ -29,3 +29,5 @@ console.log(moment().format('LLLL')); // Saturday, October 3, 2015 11:41 AM
 console.log(moment().format('llll')); // Sat, Oct 3, 2015 11:41 AM
 // What time is it?
 console.log(moment().format('HH:mm:ss')); // 16:13:11
+// get the numebr of days in the current month
+moment("2012-01", "YYYY-MM").daysInMonth()
