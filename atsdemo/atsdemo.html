@@ -95,7 +95,11 @@
         <div class="col-md-9 page-content">
             <div class="row slider">
                 <div class="col-md-1 slider__navigation-left">
-                    <i class="fa fa-chevron-left fa-2x"></i>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-3x"></i>
+                        <i class="fa fa-chevron-left fa-2x"></i>
+                    </span>
+
                 </div>
                 <div class="col-md-4 slider__content">
                     <h3>Contact us to open an ATS Pro account</h3>
@@ -104,7 +108,10 @@
                         and provide an improved customer experience.</p>
                 </div>
                 <div class="col-md-1 slider__navigation-right">
-                    <i class="fa fa-chevron-right fa-2x "></i>
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-chevron-right fa-stack-1x fa-inverse"></i>
+                    </span>
 
                 </div>
             </div>
@@ -156,13 +163,13 @@
 
 
 <footer>
-    <!--<h1>Welcome to Meteor!</h1>-->
+    <h1>Welcome to Meteor!</h1>
 
-    <!--{{> hello}}-->
+    {{> hello}}
 </footer>
 </body>
 
-<!--<template name="hello">-->
-    <!--<button>Click Me</button>-->
-    <!--<p>You've pressed the button {{counter}} times.</p>-->
-<!--</template>-->
+<template name="hello">
+    <button>Click Me</button>
+    <p>You've pressed the button {{counter}} times.</p>
+</template>

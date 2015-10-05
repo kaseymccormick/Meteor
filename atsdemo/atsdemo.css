@@ -106,13 +106,9 @@ dashboard
     border-right: 100px solid transparent;
     z-index: 100;
 }
-.active-apps__item{
+.active-apps__item, .inactive-apps__item{
     border:1px solid #7B7B82;
     border-radius:5px;
     margin: 20px;
 }
-.inactive-apps__item{
-    border:1px solid #7B7B82;
-    border-radius:5px;
-    margin: 20px;
-}
+
