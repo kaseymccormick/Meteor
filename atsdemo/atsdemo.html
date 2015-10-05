@@ -1,11 +1,99 @@
 <head>
-  <title>atsdemo</title>
+  <title>ATS Demo Site</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+<header>
+    <div class="container-fluid top-nav">
+        <div class="row">
+            <div class=".col-md-2">
+                <img src="atslogo.png">
+           </div>
+            <div class=".col-md-10">
+                <div class=".col-md-5">
+                    <i class="fa fa-bars"></i>
+                    <h4>Dashboard</h4>
+                </div>
+                <div class="top-nav">
+                    <ul>
+                        <li class="top-nav__messaging"><i class="fa fa-envelope"></i></li>
+                        <li class="top-nav__settings"><i class="fa fa-gear"></i></li>
+                        <li class="top-nav__support"><i class="fa fa-phone"></i></li>
+                        <li class="top-nav__help"><i class="fa fa-question"></i></li>
+                        <li class="top-nav__user-manual"><i class="fa fa-book"></i></li>
+                    </ul>
+                </div>
+            </div>
+         </div>
 
-  {{> hello}}
+    </div>
+
+</header>
+    <div class="container-fluid side-bar">
+        <div class="row side-bar__profile">
+            <div class="col-md-1 profile__avatar">
+                <i class="fa fa-user fa-5x"></i>
+            </div>
+            <div class="col-md-2 profile__name">
+                <h2>Kasey<br>McCormick</h2>
+            </div>
+        </div>
+        <div class="side-bar__mini-navigation">
+            <i class="fa fa-home"></i>
+            <i class="fa fa-user"></i>
+            <i class="fa fa-lock"></i>
+        </div>
+        <div class="side-bar__section">
+            <div class="side-bar__section__items row">
+                <div class="items__icon col-md-1"><i class="fa fa-building fa-3x"></i></div>
+                <div class="items__title col-md-2"><h4>ATS Pro <span>></span></h4></div>
+            </div>
+            <div class="side-bar__section__items row">
+                <div class="items__icon col-md-1"><i class="fa fa-envelope fa-3x"></i></div>
+                <div class="items__title col-md-2"><h4>ATS Messaging <span>></span></h4></div>
+
+            </div>
+            <div class="side-bar__section__items row">
+                <div class="items__icon col-md-1"><i class="fa fa-file fa-3x"></i></div>
+                <div class="items__title col-md-2"><h4>ATS Docs <span>></span></h4></div>
+
+            </div>
+            <div class="side-bar__section__items row">
+                <div class="items__icon col-md-1"><i class="fa fa-newspaper-o fa-3x"></i></div>
+                <div class="items__title col-md-2"><h4>ATS Address Book <span>></span></h4></div>
+
+
+            </div>
+            <div class="side-bar__section__items row">
+                <div class="items__icon col-md-1"><i class="fa fa-youtube-play fa-3x"></i></div>
+                <div class="items__title col-md-2"><h4>Webinars <span>></span></h4></div>
+
+            </div>
+            <div class="side-bar__section__items row">
+                <div class="items__icon col-md-1"><i class="fa fa-users fa-3x"></i></div>
+                <div class="items__title col-md-2"><h4>Invite Colleagues <span>></span></h4></div>
+
+            </div>
+            <div class="side-bar__section__items row">
+                <div class="items__icon col-md-1"><i class="fa fa-wechat fa-3x"></i></div>
+                <div class="items__title col-md-2"><h4>Feedback <span>></span></h4></div>
+
+            </div>
+            <div class="side-bar__section__items row">
+                <div class="items__icon col-md-1"><i class="fa fa-book fa-3x"></i></div>
+                <div class="items__title col-md-2"><h4>User Manual <span>></span></h4></div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+<footer>
+    <h1>Welcome to Meteor!</h1>
+
+    {{> hello}}
+</footer>
 </body>
 
 <template name="hello">
