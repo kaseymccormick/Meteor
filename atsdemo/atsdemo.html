@@ -1,92 +1,143 @@
 <head>
-  <title>ATS Demo Site</title>
+    <title>ATS Demo Site</title>
 </head>
 
 <body>
 <header>
     <div class="container-fluid top-nav">
         <div class="row">
-            <div class=".col-md-2">
+            <div class="col-md-3 top-nav__logo">
                 <img src="atslogo.png">
-           </div>
-            <div class=".col-md-10">
-                <div class=".col-md-5">
-                    <i class="fa fa-bars"></i>
-                    <h4>Dashboard</h4>
+            </div>
+            <div class="col-md-9 top-nav__dashboard">
+                <div class="col-md-5">
+                    <div class="col-md-1 top-nav__dashboard__hamburger">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <div class="col-md-4 top-nav__dashboard__title">
+                        <h3>Dashboard</h3>
+                    </div>
                 </div>
-                <div class="top-nav">
+                <div class="top-nav__mini">
                     <ul>
-                        <li class="top-nav__messaging"><i class="fa fa-envelope"></i></li>
-                        <li class="top-nav__settings"><i class="fa fa-gear"></i></li>
-                        <li class="top-nav__support"><i class="fa fa-phone"></i></li>
-                        <li class="top-nav__help"><i class="fa fa-question"></i></li>
-                        <li class="top-nav__user-manual"><i class="fa fa-book"></i></li>
+                        <li class="top-nav__mini__item messaging"><i class="fa fa-envelope fa-lg"></i></li>
+                        <li class="top-nav__mini__item settings"><i class="fa fa-gear fa-lg"></i></li>
+                        <li class="top-nav__mini__item support"><i class="fa fa-phone fa-lg"></i></li>
+                        <li class="top-nav__mini__item help"><i class="fa fa-question fa-lg"></i></li>
+                        <li class="top-nav__mini__item user-manual"><i class="fa fa-book fa-lg"></i></li>
                     </ul>
                 </div>
             </div>
-         </div>
+        </div>
 
     </div>
 
 </header>
-    <div class="container-fluid side-bar">
-        <div class="row side-bar__profile">
-            <div class="col-md-1 profile__avatar">
-                <i class="fa fa-user fa-5x"></i>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 side-bar">
+            <div class="row side-bar__profile">
+                <div class="col-md-1 profile__avatar">
+                    <i class="fa fa-user fa-5x"></i>
+                </div>
+                <div class="col-md-10 profile__name">
+                    <h4>Kasey<br>McCormick</h4>
+                </div>
             </div>
-            <div class="col-md-2 profile__name">
-                <h2>Kasey<br>McCormick</h2>
+            <div class="side-bar__mini-navigation">
+                <i class="fa fa-home fa-lg"></i>
+                <i class="fa fa-user fa-lg"></i>
+                <i class="fa fa-lock fa-lg"></i>
+            </div>
+            <div class="side-bar__section">
+                <div class="side-bar__section__items row">
+                    <div class="items__icon col-md-2"><i class="fa fa-building fa-2x"></i></div>
+                    <div class="items__title col-md-10"><h4>ATS Pro <span>></span></h4></div>
+                </div>
+                <div class="side-bar__section__items row">
+                    <div class="items__icon col-md-2"><i class="fa fa-envelope fa-2x"></i></div>
+                    <div class="items__title col-md-10"><h4>ATS Messaging <span>></span></h4></div>
+
+                </div>
+                <div class="side-bar__section__items row">
+                    <div class="items__icon col-md-2"><i class="fa fa-file fa-2x"></i></div>
+                    <div class="items__title col-md-10"><h4>ATS Docs <span>></span></h4></div>
+
+                </div>
+                <div class="side-bar__section__items row">
+                    <div class="items__icon col-md-2"><i class="fa fa-newspaper-o fa-2x"></i></div>
+                    <div class="items__title col-md-10"><h4>ATS Address Book <span>></span></h4></div>
+
+
+                </div>
+                <div class="side-bar__section__items row">
+                    <div class="items__icon col-md-2"><i class="fa fa-youtube-play fa-2x"></i></div>
+                    <div class="items__title col-md-10"><h4>Webinars <span>></span></h4></div>
+
+                </div>
+                <div class="side-bar__section__items row">
+                    <div class="items__icon col-md-2"><i class="fa fa-users fa-2x"></i></div>
+                    <div class="items__title col-md-10"><h4>Invite Colleagues <span>></span></h4></div>
+
+                </div>
+                <div class="side-bar__section__items row">
+                    <div class="items__icon col-md-2"><i class="fa fa-comment fa-2x"></i></div>
+                    <div class="items__title col-md-10"><h4>Feedback <span>></span></h4></div>
+
+                </div>
+                <div class="side-bar__section__items row">
+                    <div class="items__icon col-md-2"><i class="fa fa-book fa-2x"></i></div>
+                    <div class="items__title col-md-10"><h4>User Manual <span>></span></h4></div>
+
+                </div>
             </div>
         </div>
-        <div class="side-bar__mini-navigation">
-            <i class="fa fa-home"></i>
-            <i class="fa fa-user"></i>
-            <i class="fa fa-lock"></i>
-        </div>
-        <div class="side-bar__section">
-            <div class="side-bar__section__items row">
-                <div class="items__icon col-md-1"><i class="fa fa-building fa-3x"></i></div>
-                <div class="items__title col-md-2"><h4>ATS Pro <span>></span></h4></div>
+        <div class="col-md-9 page-content">
+            <div class="row slider">
+                <div class="col-md-1 slider__navigation-left">
+                    <i class="fa fa-chevron-left fa-2x"></i>
+                </div>
+                <div class="col-md-4 slider__content">
+                    <h3>Contact us to open an ATS Pro account</h3>
+
+                    <p>soon youll have powerfull apps at your fingertips to create efficiencies, increase profitability
+                        and provide an improved customer experience.</p>
+                </div>
+                <div class="col-md-1 slider__navigation-right">
+                    <i class="fa fa-chevron-right fa-2x "></i>
+
+                </div>
             </div>
-            <div class="side-bar__section__items row">
-                <div class="items__icon col-md-1"><i class="fa fa-envelope fa-3x"></i></div>
-                <div class="items__title col-md-2"><h4>ATS Messaging <span>></span></h4></div>
-
+            <h3>My Apps</h3>
+            <div class="row page-content__active-apps">
+                <div class="col-md-3 active-apps-item">
+                    <i class="fa fa-building fa-5x"></i>
+                    <p>Become verified and exchange data, documents and dollars with other verified account holders.</p>
+                </div>
             </div>
-            <div class="side-bar__section__items row">
-                <div class="items__icon col-md-1"><i class="fa fa-file fa-3x"></i></div>
-                <div class="items__title col-md-2"><h4>ATS Docs <span>></span></h4></div>
+            <h3>App Store</h3>
 
-            </div>
-            <div class="side-bar__section__items row">
-                <div class="items__icon col-md-1"><i class="fa fa-newspaper-o fa-3x"></i></div>
-                <div class="items__title col-md-2"><h4>ATS Address Book <span>></span></h4></div>
-
-
-            </div>
-            <div class="side-bar__section__items row">
-                <div class="items__icon col-md-1"><i class="fa fa-youtube-play fa-3x"></i></div>
-                <div class="items__title col-md-2"><h4>Webinars <span>></span></h4></div>
-
-            </div>
-            <div class="side-bar__section__items row">
-                <div class="items__icon col-md-1"><i class="fa fa-users fa-3x"></i></div>
-                <div class="items__title col-md-2"><h4>Invite Colleagues <span>></span></h4></div>
-
-            </div>
-            <div class="side-bar__section__items row">
-                <div class="items__icon col-md-1"><i class="fa fa-wechat fa-3x"></i></div>
-                <div class="items__title col-md-2"><h4>Feedback <span>></span></h4></div>
-
-            </div>
-            <div class="side-bar__section__items row">
-                <div class="items__icon col-md-1"><i class="fa fa-book fa-3x"></i></div>
-                <div class="items__title col-md-2"><h4>User Manual <span>></span></h4></div>
-
+            <div class="row inactive-apps">
+                <div class="col-md-3 inactive-apps__item inactive-apps__item--soon">
+                    <i class="fa fa-binoculars fa-5x"></i>
+                    <p>Monitor and track customer complaints on various platforms using ATS Monitor.</p>
+                </div>
+                <div class="col-md-3 inactive-apps__item inactive-apps__item--soon">
+                    <i class="fa fa-binoculars fa-5x"></i>
+                    <p>Monitor and track customer complaints on various platforms using ATS Monitor.</p>
+                </div>
+                <div class="col-md-3 inactive-apps__item inactive-apps__item--soon">
+                    <i class="fa fa-binoculars fa-5x"></i>
+                    <p>Monitor and track customer complaints on various platforms using ATS Monitor.</p>
+                </div>
+                <div class="col-md-3 inactive-apps__item inactive-apps__item--soon">
+                    <i class="fa fa-binoculars fa-5x"></i>
+                    <p>Monitor and track customer complaints on various platforms using ATS Monitor.</p>
+                </div>
             </div>
         </div>
-
     </div>
+</div>
 
 
 <footer>
@@ -97,6 +148,6 @@
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+    <button>Click Me</button>
+    <p>You've pressed the button {{counter}} times.</p>
 </template>

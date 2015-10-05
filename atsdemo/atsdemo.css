@@ -1,1 +1,95 @@
 /* CSS declarations go here */
+/*-----------------------------------------------
+
+   TABLE OF CONTENTS
+   •Top Navigation
+        - dashboard
+        - mini nav
+   •Side bar navigation
+   •page content
+        - active apps
+        -inactive apps
+
+------------------------------------------------*/
+/*-----------------------------------------------
+
+    Top Navigation
+
+------------------------------------------------*/
+.top-nav {
+    border-bottom: 1px solid #cccccc;
+}
+
+.top-nav__logo {
+    background-color: green;
+}
+
+.top-nav__dashboard__hamburger {
+    padding: 20px 10px;
+}
+
+.top-nav__dashboard__title {
+    padding-left: 30px;
+}
+
+.top-nav__mini {
+    float: right;
+}
+
+.top-nav__mini__item {
+    float: left;
+    list-style-type: none;
+    padding: 20px 15px;
+    color: #333;
+}
+
+/*-----------------------------------------------
+
+    Side bar navigation
+
+------------------------------------------------*/
+
+.side-bar {
+    background-color: #333;
+    color: white;
+    /*position: fixed;*/
+    padding-bottom: 40px;
+}
+
+.side-bar__mini-navigation {
+    background-color: #7B7B82;
+    padding: 12px 0px 8px 60px;
+}
+
+.side-bar__mini-navigation i {
+    margin-left: 20px;
+}
+
+.profile__avatar i {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 10px;
+}
+
+.profile__name h4 {
+    margin: 20px 0px 0px 100px;
+}
+
+.side-bar__section__items {
+    background-color: #424248;
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
+.items__title span {
+    float: right;
+}
+
+/*-----------------------------------------------
+
+    page content
+
+------------------------------------------------*/
+.page-content {
+    padding-left: 40px;
+}
