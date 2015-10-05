@@ -108,9 +108,11 @@ dashboard
 }
 .active-apps__item{
     border:1px solid #7B7B82;
-    bordder-radius:5px;
+    border-radius:5px;
+    margin: 20px;
 }
 .inactive-apps__item{
     border:1px solid #7B7B82;
     border-radius:5px;
+    margin: 20px;
 }
