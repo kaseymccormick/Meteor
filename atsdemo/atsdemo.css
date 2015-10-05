@@ -11,6 +11,9 @@
         -inactive apps
 
 ------------------------------------------------*/
+.ats-green{
+color:#339933
+}
 /*-----------------------------------------------
 
     Top Navigation
@@ -92,4 +95,22 @@
 ------------------------------------------------*/
 .page-content {
     padding-left: 40px;
+}
+/*------------------------------------------------
+dashboard
+------------------------------------------------*/
+.triangle-topleft {
+    width: 0;
+    height: 0;
+    border-top: 100px solid deepskyblue;
+    border-right: 100px solid transparent;
+    z-index: 100;
+}
+.active-apps__item{
+    border:1px solid #7B7B82;
+    bordder-radius:5px;
+}
+.inactive-apps__item{
+    border:1px solid #7B7B82;
+    border-radius:5px;
 }
