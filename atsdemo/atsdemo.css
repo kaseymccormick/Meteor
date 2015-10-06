@@ -30,6 +30,7 @@ body, h1, h2, h3, h4, h5, h6 {
 ------------------------------------------------*/
 .top-nav {
     border-bottom: 1px solid #cccccc;
+    /*position: fixed;*/
 }
 
 .top-nav__logo {
@@ -64,7 +65,7 @@ body, h1, h2, h3, h4, h5, h6 {
 .side-bar {
     background-color: #333;
     color: white;
-    /*position: fixed;*/
+    position: fixed;
     padding-bottom: 40px;
 }
 
@@ -101,7 +102,8 @@ body, h1, h2, h3, h4, h5, h6 {
     page content
 ------------------------------------------------*/
 .page-content {
-    padding-left: 40px;
+    position: relative;
+    left: 20%;
 }
 
 /*-----------------------------------------------
@@ -155,41 +157,57 @@ dashboard
     background-size:contain;
     background-repeat: no-repeat;
     height: 280px;
+    z-index: 99;
+}
+/*.inactive-apps__item--soon{*/
+    /*background-image: url(https://cdn.atssecured.com/sso/img/coming_soon_icon.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size:contain ;*/
+    /*z-index: 100;*/
+
+/*}*/
+.soon-icon{
+    z-index: 100%;
 }
 
-.apps__item__icon--pro {
-    background-image: url("https://cdn.atssecured.com/sso/img/app-icons/Pro.png");
 
+/*Modifiers of app tiles*/
+
+.apps__item__icon--pro {
+    background-image:url("https://cdn.atssecured.com/sso/img/app-icons/Pro.png");
 }
 
 .apps__item__icon--vendor {
-    background-image:url("https://cdn.atssecured.com/sso/img/app-icons/Vendor.png")
+    background-image:url("https://cdn.atssecured.com/sso/img/coming_soon_icon.png"),
+    url("https://cdn.atssecured.com/sso/img/app-icons/Vendor.png");
 }
 
 .apps__item__icon--standards {
-    background-image: url("https://cdn.atssecured.com/sso/img/app-icons/Standards.png")
+    background-image:url("https://cdn.atssecured.com/sso/img/coming_soon_icon.png"),
+    url("https://cdn.atssecured.com/sso/img/app-icons/Standards.png");
 }
 
 .apps__item__icon--vendor-plus {
-    background-image: url("https://cdn.atssecured.com/sso/img/app-icons/Vendor+.png")
+    background-image:url("https://cdn.atssecured.com/sso/img/coming_soon_icon.png"),
+    url("https://cdn.atssecured.com/sso/img/app-icons/Vendor+.png");
 }
 
 .apps__item__icon--pay {
-    background-image: url("https://cdn.atssecured.com/sso/img/app-icons/Pay.png")
+    background-image:url("https://cdn.atssecured.com/sso/img/coming_soon_icon.png"),
+    url("https://cdn.atssecured.com/sso/img/app-icons/Pay.png");
 }
 
 .apps__item__icon--monitor {
-    background-image: url("https://cdn.atssecured.com/sso/img/app-icons/Monitor.png")
+    background-image:url("https://cdn.atssecured.com/sso/img/coming_soon_icon.png"),
+    url("https://cdn.atssecured.com/sso/img/app-icons/Monitor.png");
 }
-
-/*Modifiers of app tiles*/
-.triangle-topleft {
-    width: 0;
-    height: 0;
-    border-top: 100px solid #ffdb6f;
-    border-right: 100px solid transparent;
-    z-index: 100;
-}
+/*.triangle-topleft {*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*border-top: 100px solid #ffdb6f;*/
+    /*border-right: 100px solid transparent;*/
+    /*z-index: 100;*/
+/*}*/
 
 /*------------------------------------------------
 shadows
