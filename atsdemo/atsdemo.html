@@ -186,17 +186,17 @@
 
                     <h2>Manage <b>Organizations (2)</b></h2>
 
-                    <div class="mini-information__add-organization">
-                        <button class="btn btn-success">Onboard Organization</button>
-                    </div>
+                        <button class="mini-information__add-organization btn btn-success">Onboard Organization</button>
+
 
                 </div>
                 <div class="page-content__header">
                     <img src="https://cdn.atssecured.com/pro/prod/img/banner/ManageOrganizationBanner.png"
                          alt="manage organizations"/>
                 </div>
-                <div class="page-contet__onboarding">
-                    <div class="row onboarding__filters">
+                <div class="row page-contet__onboarding">
+                    <div class="col-md-10 col-md-offset-4 onboarding__filters">
+
                         <form>
                             <select class=" col-md-3 selectpicker">
                                 <option>Sort By</option>
@@ -214,12 +214,13 @@
                             <button class="col-md-1 btn btn-success">search</button>
                         </form>
                     </div>
+                    <div class="clear"></div>
                     <div class="row onboarding__organization">
                         <div class="col-md-6">
-                            <div class="col-md-2 organization__logo">
+                            <div class="col-md-3 organization__logo">
                                 <img src="https://cdn.atssecured.com/pro/prod/img/profiles/default_logo.png">
                             </div>
-                            <div class="col-md-4 organization__profile">
+                            <div class="col-md-9 organization__profile">
                                 <h4>Testing Signup</h4>
 
                                 <p><b>DBA:testing process</b></p>
@@ -238,16 +239,17 @@
 
                         </div>
                         <div class="col-md-6 organization__contact left-line">
-                            <div class="col-md-2 organization__contact__images">
+                            <div class="col-md-3 organization__contact__images">
                                 <p>Primary Contact</p>
                                 <img src="https://cdn.atssecured.com/pro/prod/img/profiles/default_profile.png">
                                 <i class="fa fa-circle"></i>
                                 <i class="fa fa-circle"></i>
                                 <i class="fa fa-circle"></i>
                             </div>
-                            <div class="col-md-4 organization__contact__profile">
+                            <div class="col-md-9 organization__contact__profile">
                                 <h4>Kasey McCormick</h4>
-                                <i class="fa fa-envelope">bleh.bleh@yahoo.com</i>
+                                <i class="fa fa-envelope">bleh.bleh@yahoo.com</i><br>
+
                                 <i class="fa fa-phone">(203) 456-2432</i>
                             </div>
                         </div>
@@ -258,12 +260,13 @@
             </div>
         </div>
     </div>
-</div>
-
-<footer>
     <h1>Welcome to Meteor!</h1>
 
     {{> hello}}
+</div>
+
+<footer class="ats-green-bkgd">
+    <p>2015 <i class="fa fa-copyright"></i>ATS Secured <i class="fa fa-trademark"></i> www.atssecured.com</p>
 </footer>
 </body>
 
