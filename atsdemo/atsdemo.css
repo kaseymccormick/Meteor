@@ -22,6 +22,9 @@ body, h1, h2, h3, h4, h5, h6 {
 .t-center {
     text-align: center;
 }
+.left-line{
+    border-left:solid #ccc 1px;
+}
 
 /*-----------------------------------------------
 
@@ -208,7 +211,13 @@ dashboard
     /*border-right: 100px solid transparent;*/
     /*z-index: 100;*/
 /*}*/
-
+/*-----------------------------------------------
+onboarding
+-----------------------------------------------*/
+.onboarding__organization{
+ border:solid 1px #ccc;
+    border-radius: 8px;
+}
 /*------------------------------------------------
 shadows
 ------------------------------------------------*/
